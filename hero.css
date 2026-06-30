@@ -1,0 +1,54 @@
+.hero {
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../Images/General/Mainbuilding.avif");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    padding: 300px;
+}
+
+.hero-content {
+    max-width: 1000px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* ---------- Button ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--accent);
+    color: var(--btn-text);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    background-color: rgba(255,255,255,0.95);
+}
