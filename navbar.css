@@ -1,0 +1,87 @@
+/*NAVBAR*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: var(--nav-bg);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 16px 8%;
+
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--text);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    margin-left: auto;
+
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/*Theme Toggle  */
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-size: 1.05rem;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+/* When toggle is positioned in the navbar */
+.navbar .theme-toggle {
+    margin-left: 0px;
+}
+
+/* Fixed placement fallback (for pages without a navbar) */
+.theme-toggle.fixed {
+    position: fixed;
+    top: 16px;
+    right: 18px;
+    z-index: 1100;
+    background: rgba(255,255,255,0.04);
+}
+
+/* Mobile Navbar  */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}

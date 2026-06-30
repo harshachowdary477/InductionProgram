@@ -1,0 +1,165 @@
+.committee-hero {
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.committee-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.committee-overlay {
+    position: relative;
+    z-index: 2;
+    width: 85%;
+    max-width: 1200px;
+    color: var(--text);
+    font-family: "Segoe UI", "Segoe UI Variable", sans-serif;
+}
+
+.committee-overlay h1 {
+    font-size: 52px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.committee-overlay p {
+    font-size: 19px;
+    line-height: 2;
+    max-width: 900px;
+    color: rgba(255, 255, 255, 0.92);
+    margin-top: 0.8rem;
+}
+
+
+/*SOCIETY SECTION*/
+
+.committee-societies {
+    padding: 70px 8%;
+    background: var(--bg);
+}
+
+.committee-societies .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.committee-societies .section-heading h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.committee-societies .section-heading p {
+    max-width: 660px;
+    margin: 0 auto;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.society-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/*SOCIETY CARD*/
+
+.society-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: .3s;
+}
+
+.society-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+/*LOGO*/
+
+.society-logo {
+    width: 170px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.society-logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.society-logo h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: var(--text);
+}
+
+
+/*DESCRIPTION*/
+
+.society-content {
+    flex: 1;
+}
+
+.society-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--muted);
+    text-align: justify;
+}
+
+
+/*COMMITTEE PAGE RESPONSIVE*/
+
+@media(max-width:900px){
+
+    .society-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .society-logo{
+        width:100%;
+    }
+
+    .committee-overlay h1{
+        font-size:38px;
+    }
+
+}
+
+@media(max-width:600px){
+    .committee-overlay h1{
+        font-size:30px;
+    }
+
+    .committee-overlay p{
+        font-size:15px;
+    }
+
+    .society-logo img{
+        width:90px;
+        height:90px;
+    }
+}
