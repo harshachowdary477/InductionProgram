@@ -1,0 +1,60 @@
+.campus {
+    padding: 80px 10%;
+    background-color: var(--bg);
+}
+
+/* ---------- Section Titles ---------- */
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+.section-title p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    color: var(--muted);
+}
+ 
+/*Cards */
+
+.campus-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    color: var(--text);
+
+    padding: 30px 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.card p {
+    line-height: 1.7;
+    color: var(--muted);
+}

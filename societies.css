@@ -1,0 +1,180 @@
+.societies-section {
+    padding: 80px 7%;
+    background: var(--surface-dark);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 750px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Grid */
+
+.committee-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* Card */
+
+.committee-card {
+    background: var(--card-bg);
+    color: var(--text);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,.35);
+    transition: .35s;
+    display: flex;
+    flex-direction: column;
+}
+
+.committee-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.45);
+}
+
+/* Banner */
+
+.committee-banner {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.committee-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.82)
+    );
+}
+
+.banner-content {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    z-index: 2;
+    color: var(--text);
+}
+
+.banner-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+/* Society List */
+
+.society-list {
+    padding: 20px 25px;
+    flex: 1;
+}
+
+.society-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--divider);
+    transition: .25s;
+    cursor: pointer;
+}
+
+.society-item:last-child {
+    border-bottom: none;
+}
+
+.society-item:hover {
+    transform: translateX(8px);
+}
+
+.society-item img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: var(--card-bg);
+    padding: 4px;
+}
+
+.society-item span {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Button */
+
+.explore-btn {
+    margin: 25px;
+    border: none;
+    background: var(--accent);
+    color: var(--btn-text);
+    font-weight: 600;
+    padding: 14px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 15px;
+}
+
+.explore-btn:hover {
+    background: var(--accent-hover);
+    transform: scale(1.03);
+}
+
+/* ---------- Homepage Societies Responsive ---------- */
+
+@media (max-width:992px){
+
+    .committee-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:700px){
+
+    .committee-container{
+        grid-template-columns:1fr;
+    }
+
+    .banner-content h2{
+        font-size:26px;
+    }
+
+    .section-heading h2{
+        font-size:34px;
+    }
+
+}
